@@ -1,0 +1,285 @@
+{	
+	
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "title": "Order",
+    "description": "Order as a basket",
+    "type": "object",
+	"properties": {
+	
+		"orderNumber": {
+		
+			"description": "Unique identifier for orders",
+			"type": "string",
+                        "minLength": 1
+			
+		},
+		"status": {
+			
+			"description": "Whether a product disposable",
+			"type": "string",
+			"enum": ["sale","sold"]
+		
+		},
+		"orderPrice": {
+			
+			"description": "The price of the order",
+			"type": "string",
+			"minLength": 1
+		
+		},
+		"currency": {
+		
+			"$ref": "#/definitions/currency"
+			
+		},
+		"basket": {
+		
+			"description": "basket for the items",
+			"type": "object",
+			"properties": {
+			
+				"id": {
+					
+					"description": "Unique identifier for a basket",
+					"type": "string",
+					"minLength": 1
+					
+				},
+				"products": {
+				
+					"description": "items in the basket",
+					"type": "array",
+					"uniqueItems": true,
+					"minItems": 1,
+					"items": {
+					
+						"type": "object",
+						"properties": {
+						
+							"product": {
+								
+								"$ref": "#/definitions/product"
+							
+							},
+							"quantity": {
+							
+								"description": "Amount of same products",
+								"type": "integer"
+							
+							}
+							
+						},
+
+                                                "required": ["product","quantity"]
+						
+					}
+				
+				}
+			
+			},
+
+                        "required": ["id","products"]
+		
+		},
+		"customerId": {
+		
+			"description": "Unique identifier for  a customer",
+			"type": "string",
+			"minLength": 1
+		
+		},
+		"customerGroup": {
+		
+			"description": "Unifier for akin customers",
+			"type": "string"
+		
+		},
+		"customerAddress": {
+			
+			"$ref": "#/definitions/address"
+			
+		},
+		"invoiceAddress": {
+		
+			"$ref": "#/definitions/address"
+		
+		},
+		"paymentMethod": {
+		
+			"description": "Method how many will be transfered",
+			"type": "string",
+			"enum": ["Paypal", "Visa", "MasterCard", "AmEx", "Bitcoin", "Invoice",
+					"charge"]
+		
+		},
+		"deliveryConditions": {
+		
+			"description": "Any special conditions for the delivery (Suggestion: Array)",
+			"type": "string"
+			
+		},
+		"paymentConditions": {
+		
+			"description": "Any special conditions for the payment (Suggestion: Array)",
+			"type": "string"
+			
+		},
+		"shipType": {
+		
+			"description": "goods vehicle",
+			"type": "string",
+			"enum": ["Schiff", "LKW", "PKW", "Hyperloop", "Taxi",
+					"Flugzeug", "Helicopter"]
+		
+		},
+		"shipCosts": {
+		
+			"description": "Costs for the shipping",
+			"type": "string",
+			"minLength": 1
+			
+		},
+		"couponCodes": {
+		
+			"description": "A numeric code as a voucher with at least one digit",
+			"type": "string",
+			"pattern": "^[0-9]+$"
+		
+		},
+		"giftPackage": {
+		
+			"description": "Wrapping for the products",
+			"type": "array",
+			"minItems": 0,
+			"uniqueItems": true,
+			"items": {
+			
+				"type": "string",
+				"pattern": "^[0-9]{3}$"
+				
+			}
+			
+		},
+		"differenceData": {
+			
+			"description": "?",
+			"type": "number"
+			
+		}
+		
+	},
+	"required": ["orderNumber", "status", "orderPrice", "currency", 
+				"basket", "customerId", "customerAddress", "invoiceAddress",
+				"paymentMethod", "deliveryConditions", "paymentConditions",
+				"shipType", "shipCosts"],
+				
+	"definitions": {
+	
+		"address": {
+			
+			"description": "Address information",
+			"type": "string",
+			"pattern": "^[0-9]{5}\\s.*\\s.*\\s[1-9]{1}[0-9]{0,3}$"
+			
+		},
+		"product": {
+		
+			"type": "object",
+			"properties": {
+				
+				"id": {
+				
+					"description": "Unique identifier for a single product",
+					"type": "string",
+					"pattern": "^[0-9]{4}$"
+				
+				},
+				"name": {
+				
+					"description": "Name of the product",
+					"type": "string",
+					"minLength": 2
+				
+				},
+				"category": {
+				
+					"description": "Tags as category",
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+					
+						"description": "Single tags",
+						"type": "string"
+						
+					}
+				
+				},
+				"price": {
+				
+					"description": "Single price",
+					"type": "string",
+					"minLength": 1
+				
+				},
+				"currency": {
+				
+					"$ref": "#/definitions/currency"
+					
+				},
+				"variants": {
+				
+					"description": "Specific properties of the product",
+					"type": "object",
+					"properties": {
+					
+						"Farbe": {
+						
+							"description": "Color of the product",
+							"type": "string"
+						
+						},
+						"Gewicht": {
+						
+							"description": "Weight of the product",
+							"type": "string"
+						
+						},
+						"Variante": {
+						
+							"description": "Variety of the product",
+							"type": "string"
+						
+						}
+					
+					}
+					
+				}
+				
+			}
+		},
+		"currency": {
+		
+			"description": "Currency for the payment",
+			"type": "string",
+			"enum": ["ED","AFN","ALL","AMD","ANG","AOA","ARS","AUD","AWG",
+			"AZN","BAM","BBD","BDT","BGN","BHD","BIF","BMD","BND","BOB","BRL",
+			"BSD","BTN","BWP","BYN","BZD","CAD","CDF","CHF","CLP","CNY","COP",
+			"CRC","CUC","CUP","CVE","CZK","DJF","DKK","DOP","DZD","EGP","ERN",
+			"ETB","EUR","FJD","FKP","GBP","GEL","GGP","GHS","GIP","GMD","GNF",
+			"GTQ","GYD","HKD","HNL","HRK","HTG","HUF","IDR","ILS","IMP","INR",
+			"IQD","IRR","ISK","JEP","JMD","JOD","JPY","KES","KGS","KHR","KMF",
+			"KPW","KRW","KWD","KYD","KZT","LAK","LBP","LKR","LRD","LSL","LYD",
+			"MAD","MDL","MGA","MKD","MMK","MNT","MOP","MRO","MRU","MUR","MVR",
+			"MWK","MXN","MYR","MZN","NAD","NGN","NIO","NOK","NPR","NZD","OMR",
+			"PAB","PEN","PGK","PHP","PKR","PLN","PYG","QAR","RON","RSD","RUB",
+			"RWF","SAR","SBD","SCR","SDG","SEK","SGD","SHP","SLL","SOS","SRD",
+			"SSP","STD","STN","SVC","SYP","SZL","THB","TJS","TMT","TND","TOP",
+			"TRY","TTD","TWD","TZS","UAH","UGX","USD","UYU","UZS","VEF","VND",
+			"VUV","WST","XAF","XCD","XOF","XPF","YER","ZAR","ZMW","ZWL"]
+		
+		}
+			
+	}
+	
+}
