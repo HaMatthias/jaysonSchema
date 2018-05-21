@@ -1,0 +1,21 @@
+{
+    
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Formats-validation",
+    "$comment": "Example for formats keyword of JSON-Schema draft-07",
+    "type": "object",
+    "properties": {
+        
+        "date": {
+            
+            "format": "date-time"
+            
+        },
+        "e-mail": {
+        
+            "format": "email"
+        
+        }
+    }
+    
+}

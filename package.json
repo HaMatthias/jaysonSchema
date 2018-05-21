@@ -1,12 +1,14 @@
 {
-  "name": "me",
-  "version": "0.0.1",
-  "description": "my project",
-  "main": "index.js",
-  "repository": "https://github.com/claudioaltamura/jaysonSchema.git",
-  "author": "Claudio Altamura <claudio@claudioaltamura.de>",
-  "license": "MIT",
+  "name": "validation",
+  "version": "1.0.0",
+  "description": "JSON Schema validation",
+  "main": "validation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthias Hahn",
+  "license": "ISC",
   "dependencies": {
-    "ajv": "^6.4.0"
+    "ajv": "^6.5.0"
   }
 }
