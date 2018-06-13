@@ -1,0 +1,74 @@
+{
+    
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Formats-validation",
+    "$comment": "Example for formats keyword of JSON-Schema draft-07",
+    "type": "object",
+    "properties": {
+        
+        "date": {
+            
+            "$comment": "Date format derived from RFC 3339, section 5.6",
+            "format": "date-time"
+            
+        },
+        "e-mail": {
+            
+            "$comment": "E-Mail format derived from RFC 5322, section 3.4.1",
+            "format": "email"
+        
+        },
+        "hostname": {
+            
+            "$comment": "Hostname format derived from RFC 1034, section 3.1",
+            "format": "hostname"
+            
+        },
+        "IPv4": {
+            
+            "$comment": "IPv4 address format derived from RFC 2673, section 3.2",
+            "format": "ipv4"
+            
+        },
+        "IPv6": {
+            
+            "$comment": "IPv6 address format derived from RFC 4291, section 2.2",
+            "format": "ipv6"
+            
+        },
+        "URI": {
+            
+            "$comment": "URI format dervied from RFC 3986, section 3",
+            "format": "uri"
+            
+        },
+        "URI-tpl": {
+            
+            "$comment": "URI-template format derived from RFC 6570",
+            "format": "uri-template"
+            
+        },
+        "RegEx": {
+            
+            "$comment": "RegEx format derived from ECMA 262",
+            "format": "regex"
+            
+        },
+        "JSON-pointer": {
+            
+            "$comment": "JSON-pointer format derived from RFC 6901, section 5",
+            "format": "json-pointer"
+            
+        },
+        "Relative-JSON-pointer": {
+            
+            "$comment": "Relative JSON-pointer derived from draft 'draft-handrews-relative-json-pointer-01'",
+            "format": "relative-json-pointer"
+            
+        }
+        
+        
+        
+    }
+    
+}

@@ -1,24 +1,46 @@
+//##########################################
+//##########################################
+//##########################################
+// Getter & Instantiation
+
+// Instantiation
 var ajv = new (require("ajv"));
 
-const schema = require("./schema.json");
-const schema_formats = require("./schema_formats.json");
+// Schemas
+const schema = require("./JSON_schemas/schema.json");
+const schema_formats = require("./JSON_schemas/schema_formats.json");
+const schema_remote = require("./JSON_schemas/remote.json");
 
-const valid = require("./valid.json");
-const invalid = require("./invalid.json");
+// Normal data
+const valid = require("./JSON_data/valid.json");
+const invalid = require("./JSON_data/invalid.json");
 
-const formats = require("./formats.json");
+// Semantic data
+const formats = require("./JSON_data/formats.json");
+
+// Added schemas
+ajv.addSchema(schema_remote);
+
+//##########################################
+//##########################################
+//##########################################
+// Validation
+
+logValidation("Valid order example", schema, valid);
+logValidation("Invalid order example", schema, invalid);
+logValidation("Semantic example", schema_formats, formats);
 
 
-var result = ajv.validate(schema, valid);
 
-console.log("Valid order example: " + result);
+//##########################################
+//##########################################
+//##########################################
+// Logger
 
-result = ajv.validate(schema, invalid);
-
-console.log("Invalid order example: " + result);
-
-result = ajv.validate(schema_formats, formats);
-
-console.log("Formats example: " + result);
+function logValidation(resultType, schema, data) {
+    
+    console.log(resultType + ": " + ajv.validate(schema, data));
+    
+}
 
 

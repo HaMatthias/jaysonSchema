@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <title>Bootprint</title>
+                                                         </head>
+<body>
+<div class="container">
+    <div id="definition-Order" class="panel panel-definition">
+            <div class="panel-heading">
+                    <h3 class="panel-title">Order</h3>
+            </div>
+        <div class="panel-body">
+                
+                        <section class="json-schema-properties">
+                            <dl>
+                                    <dt data-property-name="orderNumber">
+                                        <span class="json-property-name">orderNumber:</span>
+                                        
+                                        <span class="json-property-type">string</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            <span class="json-property-range" title="String length limits">
+                                                    (at least 1 chars)
+                                            </span>
+                                            <span class="json-property-required"></span>
+                                    </dt>
+                                    <dd>
+                                        
+                                        <div class="json-inner-schema">
+                                            
+                                        </div>
+                                    </dd>
+                                    <dt data-property-name="status">
+                                        <span class="json-property-name">status:</span>
+                                        
+                                        <span class="json-property-type">string</span>    <span class="json-property-enum" title="Possible values">, x &isin; {
+                                                        <span class="json-property-enum-item">sale</span>
+                                                    ,
+                                                        <span class="json-property-enum-item">sold</span>
+                                                    
+                                                }
+                                                </span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            <span class="json-property-required"></span>
+                                    </dt>
+                                    <dd>
+                                        
+                                        <div class="json-inner-schema">
+                                            
+                                        </div>
+                                    </dd>
+                                    <dt data-property-name="orderPrice">
+                                        <span class="json-property-name">orderPrice:</span>
+                                        
+                                        <span class="json-property-type">string</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            <span class="json-property-range" title="String length limits">
+                                                    (at least 1 chars)
+                                            </span>
+                                            <span class="json-property-required"></span>
+                                    </dt>
+                                    <dd>
+                                        
+                                        <div class="json-inner-schema">
+                                            
+                                        </div>
+                                    </dd>
+                                    <dt data-property-name="currency">
+                                        <span class="json-property-name">currency:</span>
+                                        
+                                        <span class="json-property-type">    <a class="json-schema-ref" href="#/definitions/currency">currency</a>
+                                        </span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            <span class="json-property-required"></span>
+                                    </dt>
+                                    <dd>
+                                        
+                                        <div class="json-inner-schema">
+                                            
+                                        </div>
+                                    </dd>
+                                    <dt data-property-name="basket">
+                                        <span class="json-property-name">basket:</span>
+                                        
+                                        <span class="json-property-type">object</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            <span class="json-property-required"></span>
+                                    </dt>
+                                    <dd>
+                                        
+                                        <div class="json-inner-schema">
+                                            
+                                                    <section class="json-schema-properties">
+                                                        <dl>
+                                                                <dt data-property-name="id">
+                                                                    <span class="json-property-name">id:</span>
+                                                                    
+                                                                    <span class="json-property-type">string</span>
+                                                                    <span class="json-property-range" title="Value limits"></span>
+                                                                    
+                                                                        <span class="json-property-range" title="String length limits">
+                                                                                (at least 1 chars)
+                                                                        </span>
+                                                                        <span class="json-property-required"></span>
+                                                                </dt>
+                                                                <dd>
+                                                                    
+                                                                    <div class="json-inner-schema">
+                                                                        
+                                                                    </div>
+                                                                </dd>
+                                                                <dt data-property-name="products">
+                                                                    <span class="json-property-name">products:</span>
+                                                                    
+                                                                    <span class="json-property-type">object[]</span>
+                                                                    <span class="json-property-range" title="Value limits"></span>
+                                                                    
+                                                                        <span class="json-property-required"></span>
+                                                                </dt>
+                                                                <dd>
+                                                                    
+                                                                    <div class="json-inner-schema">
+                                                                        
+                                                                                        <section class="json-schema-array-items">
+                                                                                            
+                                                                                            <span class="json-property-type">object</span>
+                                                                                            <span class="json-property-range" title="Value limits"></span>
+                                                                                            
+                                                                                            <div class="json-inner-schema">
+                                                                                                
+                                                                                                        <section class="json-schema-properties">
+                                                                                                            <dl>
+                                                                                                                    <dt data-property-name="product">
+                                                                                                                        <span class="json-property-name">product:</span>
+                                                                                                                        
+                                                                                                                        <span class="json-property-type">    <a class="json-schema-ref" href="#/definitions/product">product</a>
+                                                                                                                        </span>
+                                                                                                                        <span class="json-property-range" title="Value limits"></span>
+                                                                                                                        
+                                                                                                                            <span class="json-property-required"></span>
+                                                                                                                    </dt>
+                                                                                                                    <dd>
+                                                                                                                        
+                                                                                                                        <div class="json-inner-schema">
+                                                                                                                            
+                                                                                                                        </div>
+                                                                                                                    </dd>
+                                                                                                                    <dt data-property-name="quantity">
+                                                                                                                        <span class="json-property-name">quantity:</span>
+                                                                                                                        
+                                                                                                                        <span class="json-property-type">integer</span>
+                                                                                                                        <span class="json-property-range" title="Value limits"></span>
+                                                                                                                        
+                                                                                                                            <span class="json-property-required"></span>
+                                                                                                                    </dt>
+                                                                                                                    <dd>
+                                                                                                                        
+                                                                                                                        <div class="json-inner-schema">
+                                                                                                                            
+                                                                                                                        </div>
+                                                                                                                    </dd>
+                                                                                                            </dl>
+                                                                                                        </section>
+                                                                                            </div>
+                                                                                        </section>                </div>
+                                                                </dd>
+                                                        </dl>
+                                                    </section>
+                                        </div>
+                                    </dd>
+                                    <dt data-property-name="customerId">
+                                        <span class="json-property-name">customerId:</span>
+                                        
+                                        <span class="json-property-type">string</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            <span class="json-property-range" title="String length limits">
+                                                    (at least 1 chars)
+                                            </span>
+                                            <span class="json-property-required"></span>
+                                    </dt>
+                                    <dd>
+                                        
+                                        <div class="json-inner-schema">
+                                            
+                                        </div>
+                                    </dd>
+                                    <dt data-property-name="customerGroup">
+                                        <span class="json-property-name">customerGroup:</span>
+                                        
+                                        <span class="json-property-type">string</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                    </dt>
+                                    <dd>
+                                        
+                                        <div class="json-inner-schema">
+                                            
+                                        </div>
+                                    </dd>
+                                    <dt data-property-name="customerAddress">
+                                        <span class="json-property-name">customerAddress:</span>
+                                        
+                                        <span class="json-property-type">    <a class="json-schema-ref" href="../remote/index.html">remote.jsonaddress</a>
+                                        </span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            <span class="json-property-required"></span>
+                                    </dt>
+                                    <dd>
+                                        
+                                        <div class="json-inner-schema">
+                                            
+                                        </div>
+                                    </dd>
+                                    <dt data-property-name="invoiceAddress">
+                                        <span class="json-property-name">invoiceAddress:</span>
+                                        
+                                        <span class="json-property-type">    <a class="json-schema-ref" href="../remote/index.html">remote.jsonaddress</a>
+                                        </span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            <span class="json-property-required"></span>
+                                    </dt>
+                                    <dd>
+                                        
+                                        <div class="json-inner-schema">
+                                            
+                                        </div>
+                                    </dd>
+                                    <dt data-property-name="if">
+                                        <span class="json-property-name">if:</span>
+                                        
+                                        <span class="json-property-type">object</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                    </dt>
+                                    <dd>
+                                        
+                                        <div class="json-inner-schema">
+                                            
+                                                <section class="json-schema-properties">
+                                                    <dl>
+                                                            <dt data-property-name="currency">
+                                                                <span class="json-property-name">currency:</span>
+                                                                
+                                                                <span class="json-property-type">object</span>    <span class="json-property-enum" title="Possible values">, x &isin; {
+                                                                                <span class="json-property-enum-item">BTC</span>
+                                                                            
+                                                                        }
+                                                                        </span>
+                                                                <span class="json-property-range" title="Value limits"></span>
+                                                                
+                                                            </dt>
+                                                            <dd>
+                                                                
+                                                                <div class="json-inner-schema">
+                                                                    
+                                                                </div>
+                                                            </dd>
+                                                    </dl>
+                                                </section>
+                                        </div>
+                                    </dd>
+                                    <dt data-property-name="then">
+                                        <span class="json-property-name">then:</span>
+                                        
+                                        <span class="json-property-type">object</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                    </dt>
+                                    <dd>
+                                        
+                                        <div class="json-inner-schema">
+                                            
+                                                <section class="json-schema-properties">
+                                                    <dl>
+                                                            <dt data-property-name="paymentMethod">
+                                                                <span class="json-property-name">paymentMethod:</span>
+                                                                
+                                                                <span class="json-property-type">object</span>
+                                                                <span class="json-property-range" title="Value limits"></span>
+                                                                
+                                                            </dt>
+                                                            <dd>
+                                                                
+                                                                <div class="json-inner-schema">
+                                                                    
+                                                                </div>
+                                                            </dd>
+                                                    </dl>
+                                                </section>
+                                        </div>
+                                    </dd>
+                                    <dt data-property-name="paymentMethod">
+                                        <span class="json-property-name">paymentMethod:</span>
+                                        
+                                        <span class="json-property-type">string</span>    <span class="json-property-enum" title="Possible values">, x &isin; {
+                                                        <span class="json-property-enum-item">Paypal</span>
+                                                    ,
+                                                        <span class="json-property-enum-item">Visa</span>
+                                                    ,
+                                                        <span class="json-property-enum-item">MasterCard</span>
+                                                    ,
+                                                        <span class="json-property-enum-item">AmEx</span>
+                                                    ,
+                                                        <span class="json-property-enum-item">Bitcoin</span>
+                                                    ,
+                                                        <span class="json-property-enum-item">Invoice</span>
+                                                    ,
+                                                        <span class="json-property-enum-item">charge</span>
+                                                    
+                                                }
+                                                </span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            <span class="json-property-required"></span>
+                                    </dt>
+                                    <dd>
+                                        
+                                        <div class="json-inner-schema">
+                                            
+                                        </div>
+                                    </dd>
+                                    <dt data-property-name="deliveryConditions">
+                                        <span class="json-property-name">deliveryConditions:</span>
+                                        
+                                        <span class="json-property-type">string</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            <span class="json-property-required"></span>
+                                    </dt>
+                                    <dd>
+                                        
+                                        <div class="json-inner-schema">
+                                            
+                                        </div>
+                                    </dd>
+                                    <dt data-property-name="paymentConditions">
+                                        <span class="json-property-name">paymentConditions:</span>
+                                        
+                                        <span class="json-property-type">string</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            <span class="json-property-required"></span>
+                                    </dt>
+                                    <dd>
+                                        
+                                        <div class="json-inner-schema">
+                                            
+                                        </div>
+                                    </dd>
+                                    <dt data-property-name="shipType">
+                                        <span class="json-property-name">shipType:</span>
+                                        
+                                        <span class="json-property-type">string</span>    <span class="json-property-enum" title="Possible values">, x &isin; {
+                                                        <span class="json-property-enum-item">Schiff</span>
+                                                    ,
+                                                        <span class="json-property-enum-item">LKW</span>
+                                                    ,
+                                                        <span class="json-property-enum-item">PKW</span>
+                                                    ,
+                                                        <span class="json-property-enum-item">Hyperloop</span>
+                                                    ,
+                                                        <span class="json-property-enum-item">Taxi</span>
+                                                    ,
+                                                        <span class="json-property-enum-item">Flugzeug</span>
+                                                    ,
+                                                        <span class="json-property-enum-item">Helicopter</span>
+                                                    
+                                                }
+                                                </span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            <span class="json-property-required"></span>
+                                    </dt>
+                                    <dd>
+                                        
+                                        <div class="json-inner-schema">
+                                            
+                                        </div>
+                                    </dd>
+                                    <dt data-property-name="shipCosts">
+                                        <span class="json-property-name">shipCosts:</span>
+                                        
+                                        <span class="json-property-type">string</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            <span class="json-property-range" title="String length limits">
+                                                    (at least 1 chars)
+                                            </span>
+                                            <span class="json-property-required"></span>
+                                    </dt>
+                                    <dd>
+                                        
+                                        <div class="json-inner-schema">
+                                            
+                                        </div>
+                                    </dd>
+                                    <dt data-property-name="couponCodes">
+                                        <span class="json-property-name">couponCodes:</span>
+                                        
+                                        <span class="json-property-type">string</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            <span class="json-property-pattern" title="String pattern">, must match <span class="json-schema--regex">^[0-9]+$</span>
+                                    </dt>
+                                    <dd>
+                                        
+                                        <div class="json-inner-schema">
+                                            
+                                        </div>
+                                    </dd>
+                                    <dt data-property-name="giftPackage">
+                                        <span class="json-property-name">giftPackage:</span>
+                                        
+                                        <span class="json-property-type">string[]</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                    </dt>
+                                    <dd>
+                                        
+                                        <div class="json-inner-schema">
+                                            
+                                                            <section class="json-schema-array-items">
+                                                                
+                                                                <span class="json-property-type">string</span>
+                                                                <span class="json-property-range" title="Value limits"></span>
+                                                                
+                                                                    <span class="json-property-pattern" title="String pattern">, must match <span class="json-schema--regex">^[0-9]{3}$</span>
+                                                                <div class="json-inner-schema">
+                                                                    
+                                                                </div>
+                                                            </section>                </div>
+                                    </dd>
+                                    <dt data-property-name="differenceData">
+                                        <span class="json-property-name">differenceData:</span>
+                                        
+                                        <span class="json-property-type">number</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                    </dt>
+                                    <dd>
+                                        
+                                        <div class="json-inner-schema">
+                                            
+                                        </div>
+                                    </dd>
+                            </dl>
+                        </section>
+        </div>
+    </div>    <h2>Definitions</h2>
+                <div id="definition-currency" class="panel panel-definition">
+                        <div class="panel-heading">
+                                <h3 class="panel-title"><a name="/definitions/currency"></a>currency:
+                                    <span class="json-property-type">
+                <span class="json-property-type">string</span>    <span class="json-property-enum" title="Possible values">, x &isin; {
+                                <span class="json-property-enum-item">ED</span>
+                            ,
+                                <span class="json-property-enum-item">AFN</span>
+                            ,
+                                <span class="json-property-enum-item">ALL</span>
+                            ,
+                                <span class="json-property-enum-item">AMD</span>
+                            ,
+                                <span class="json-property-enum-item">ANG</span>
+                            ,
+                                <span class="json-property-enum-item">AOA</span>
+                            ,
+                                <span class="json-property-enum-item">ARS</span>
+                            ,
+                                <span class="json-property-enum-item">AUD</span>
+                            ,
+                                <span class="json-property-enum-item">AWG</span>
+                            ,
+                                <span class="json-property-enum-item">AZN</span>
+                            ,
+                                <span class="json-property-enum-item">BAM</span>
+                            ,
+                                <span class="json-property-enum-item">BBD</span>
+                            ,
+                                <span class="json-property-enum-item">BDT</span>
+                            ,
+                                <span class="json-property-enum-item">BGN</span>
+                            ,
+                                <span class="json-property-enum-item">BHD</span>
+                            ,
+                                <span class="json-property-enum-item">BIF</span>
+                            ,
+                                <span class="json-property-enum-item">BMD</span>
+                            ,
+                                <span class="json-property-enum-item">BND</span>
+                            ,
+                                <span class="json-property-enum-item">BOB</span>
+                            ,
+                                <span class="json-property-enum-item">BRL</span>
+                            ,
+                                <span class="json-property-enum-item">BSD</span>
+                            ,
+                                <span class="json-property-enum-item">BTN</span>
+                            ,
+                                <span class="json-property-enum-item">BWP</span>
+                            ,
+                                <span class="json-property-enum-item">BYN</span>
+                            ,
+                                <span class="json-property-enum-item">BZD</span>
+                            ,
+                                <span class="json-property-enum-item">CAD</span>
+                            ,
+                                <span class="json-property-enum-item">CDF</span>
+                            ,
+                                <span class="json-property-enum-item">CHF</span>
+                            ,
+                                <span class="json-property-enum-item">CLP</span>
+                            ,
+                                <span class="json-property-enum-item">CNY</span>
+                            ,
+                                <span class="json-property-enum-item">COP</span>
+                            ,
+                                <span class="json-property-enum-item">CRC</span>
+                            ,
+                                <span class="json-property-enum-item">CUC</span>
+                            ,
+                                <span class="json-property-enum-item">CUP</span>
+                            ,
+                                <span class="json-property-enum-item">CVE</span>
+                            ,
+                                <span class="json-property-enum-item">CZK</span>
+                            ,
+                                <span class="json-property-enum-item">DJF</span>
+                            ,
+                                <span class="json-property-enum-item">DKK</span>
+                            ,
+                                <span class="json-property-enum-item">DOP</span>
+                            ,
+                                <span class="json-property-enum-item">DZD</span>
+                            ,
+                                <span class="json-property-enum-item">EGP</span>
+                            ,
+                                <span class="json-property-enum-item">ERN</span>
+                            ,
+                                <span class="json-property-enum-item">ETB</span>
+                            ,
+                                <span class="json-property-enum-item">EUR</span>
+                            ,
+                                <span class="json-property-enum-item">FJD</span>
+                            ,
+                                <span class="json-property-enum-item">FKP</span>
+                            ,
+                                <span class="json-property-enum-item">GBP</span>
+                            ,
+                                <span class="json-property-enum-item">GEL</span>
+                            ,
+                                <span class="json-property-enum-item">GGP</span>
+                            ,
+                                <span class="json-property-enum-item">GHS</span>
+                            ,
+                                <span class="json-property-enum-item">GIP</span>
+                            ,
+                                <span class="json-property-enum-item">GMD</span>
+                            ,
+                                <span class="json-property-enum-item">GNF</span>
+                            ,
+                                <span class="json-property-enum-item">GTQ</span>
+                            ,
+                                <span class="json-property-enum-item">GYD</span>
+                            ,
+                                <span class="json-property-enum-item">HKD</span>
+                            ,
+                                <span class="json-property-enum-item">HNL</span>
+                            ,
+                                <span class="json-property-enum-item">HRK</span>
+                            ,
+                                <span class="json-property-enum-item">HTG</span>
+                            ,
+                                <span class="json-property-enum-item">HUF</span>
+                            ,
+                                <span class="json-property-enum-item">IDR</span>
+                            ,
+                                <span class="json-property-enum-item">ILS</span>
+                            ,
+                                <span class="json-property-enum-item">IMP</span>
+                            ,
+                                <span class="json-property-enum-item">INR</span>
+                            ,
+                                <span class="json-property-enum-item">IQD</span>
+                            ,
+                                <span class="json-property-enum-item">IRR</span>
+                            ,
+                                <span class="json-property-enum-item">ISK</span>
+                            ,
+                                <span class="json-property-enum-item">JEP</span>
+                            ,
+                                <span class="json-property-enum-item">JMD</span>
+                            ,
+                                <span class="json-property-enum-item">JOD</span>
+                            ,
+                                <span class="json-property-enum-item">JPY</span>
+                            ,
+                                <span class="json-property-enum-item">KES</span>
+                            ,
+                                <span class="json-property-enum-item">KGS</span>
+                            ,
+                                <span class="json-property-enum-item">KHR</span>
+                            ,
+                                <span class="json-property-enum-item">KMF</span>
+                            ,
+                                <span class="json-property-enum-item">KPW</span>
+                            ,
+                                <span class="json-property-enum-item">KRW</span>
+                            ,
+                                <span class="json-property-enum-item">KWD</span>
+                            ,
+                                <span class="json-property-enum-item">KYD</span>
+                            ,
+                                <span class="json-property-enum-item">KZT</span>
+                            ,
+                                <span class="json-property-enum-item">LAK</span>
+                            ,
+                                <span class="json-property-enum-item">LBP</span>
+                            ,
+                                <span class="json-property-enum-item">LKR</span>
+                            ,
+                                <span class="json-property-enum-item">LRD</span>
+                            ,
+                                <span class="json-property-enum-item">LSL</span>
+                            ,
+                                <span class="json-property-enum-item">LYD</span>
+                            ,
+                                <span class="json-property-enum-item">MAD</span>
+                            ,
+                                <span class="json-property-enum-item">MDL</span>
+                            ,
+                                <span class="json-property-enum-item">MGA</span>
+                            ,
+                                <span class="json-property-enum-item">MKD</span>
+                            ,
+                                <span class="json-property-enum-item">MMK</span>
+                            ,
+                                <span class="json-property-enum-item">MNT</span>
+                            ,
+                                <span class="json-property-enum-item">MOP</span>
+                            ,
+                                <span class="json-property-enum-item">MRO</span>
+                            ,
+                                <span class="json-property-enum-item">MRU</span>
+                            ,
+                                <span class="json-property-enum-item">MUR</span>
+                            ,
+                                <span class="json-property-enum-item">MVR</span>
+                            ,
+                                <span class="json-property-enum-item">MWK</span>
+                            ,
+                                <span class="json-property-enum-item">MXN</span>
+                            ,
+                                <span class="json-property-enum-item">MYR</span>
+                            ,
+                                <span class="json-property-enum-item">MZN</span>
+                            ,
+                                <span class="json-property-enum-item">NAD</span>
+                            ,
+                                <span class="json-property-enum-item">NGN</span>
+                            ,
+                                <span class="json-property-enum-item">NIO</span>
+                            ,
+                                <span class="json-property-enum-item">NOK</span>
+                            ,
+                                <span class="json-property-enum-item">NPR</span>
+                            ,
+                                <span class="json-property-enum-item">NZD</span>
+                            ,
+                                <span class="json-property-enum-item">OMR</span>
+                            ,
+                                <span class="json-property-enum-item">PAB</span>
+                            ,
+                                <span class="json-property-enum-item">PEN</span>
+                            ,
+                                <span class="json-property-enum-item">PGK</span>
+                            ,
+                                <span class="json-property-enum-item">PHP</span>
+                            ,
+                                <span class="json-property-enum-item">PKR</span>
+                            ,
+                                <span class="json-property-enum-item">PLN</span>
+                            ,
+                                <span class="json-property-enum-item">PYG</span>
+                            ,
+                                <span class="json-property-enum-item">QAR</span>
+                            ,
+                                <span class="json-property-enum-item">RON</span>
+                            ,
+                                <span class="json-property-enum-item">RSD</span>
+                            ,
+                                <span class="json-property-enum-item">RUB</span>
+                            ,
+                                <span class="json-property-enum-item">RWF</span>
+                            ,
+                                <span class="json-property-enum-item">SAR</span>
+                            ,
+                                <span class="json-property-enum-item">SBD</span>
+                            ,
+                                <span class="json-property-enum-item">SCR</span>
+                            ,
+                                <span class="json-property-enum-item">SDG</span>
+                            ,
+                                <span class="json-property-enum-item">SEK</span>
+                            ,
+                                <span class="json-property-enum-item">SGD</span>
+                            ,
+                                <span class="json-property-enum-item">SHP</span>
+                            ,
+                                <span class="json-property-enum-item">SLL</span>
+                            ,
+                                <span class="json-property-enum-item">SOS</span>
+                            ,
+                                <span class="json-property-enum-item">SRD</span>
+                            ,
+                                <span class="json-property-enum-item">SSP</span>
+                            ,
+                                <span class="json-property-enum-item">STD</span>
+                            ,
+                                <span class="json-property-enum-item">STN</span>
+                            ,
+                                <span class="json-property-enum-item">SVC</span>
+                            ,
+                                <span class="json-property-enum-item">SYP</span>
+                            ,
+                                <span class="json-property-enum-item">SZL</span>
+                            ,
+                                <span class="json-property-enum-item">THB</span>
+                            ,
+                                <span class="json-property-enum-item">TJS</span>
+                            ,
+                                <span class="json-property-enum-item">TMT</span>
+                            ,
+                                <span class="json-property-enum-item">TND</span>
+                            ,
+                                <span class="json-property-enum-item">TOP</span>
+                            ,
+                                <span class="json-property-enum-item">TRY</span>
+                            ,
+                                <span class="json-property-enum-item">TTD</span>
+                            ,
+                                <span class="json-property-enum-item">TWD</span>
+                            ,
+                                <span class="json-property-enum-item">TZS</span>
+                            ,
+                                <span class="json-property-enum-item">UAH</span>
+                            ,
+                                <span class="json-property-enum-item">UGX</span>
+                            ,
+                                <span class="json-property-enum-item">USD</span>
+                            ,
+                                <span class="json-property-enum-item">UYU</span>
+                            ,
+                                <span class="json-property-enum-item">UZS</span>
+                            ,
+                                <span class="json-property-enum-item">VEF</span>
+                            ,
+                                <span class="json-property-enum-item">VND</span>
+                            ,
+                                <span class="json-property-enum-item">VUV</span>
+                            ,
+                                <span class="json-property-enum-item">WST</span>
+                            ,
+                                <span class="json-property-enum-item">XAF</span>
+                            ,
+                                <span class="json-property-enum-item">XCD</span>
+                            ,
+                                <span class="json-property-enum-item">XOF</span>
+                            ,
+                                <span class="json-property-enum-item">XPF</span>
+                            ,
+                                <span class="json-property-enum-item">YER</span>
+                            ,
+                                <span class="json-property-enum-item">ZAR</span>
+                            ,
+                                <span class="json-property-enum-item">ZMW</span>
+                            ,
+                                <span class="json-property-enum-item">ZWL</span>
+                            
+                        }
+                        </span>
+                <span class="json-property-range" title="Value limits"></span>
+                
+                </span>
+                                </h3>
+                        </div>
+                    <div class="panel-body">
+                            
+                    </div>
+                </div>        <div id="definition-product" class="panel panel-definition">
+                        <div class="panel-heading">
+                                <h3 class="panel-title"><a name="/definitions/product"></a>product:
+                                    <span class="json-property-type">
+                <span class="json-property-type">object</span>
+                <span class="json-property-range" title="Value limits"></span>
+                
+                </span>
+                                </h3>
+                        </div>
+                    <div class="panel-body">
+                            
+                                    <section class="json-schema-properties">
+                                        <dl>
+                                                <dt data-property-name="id">
+                                                    <span class="json-property-name">id:</span>
+                                                    
+                                                    <span class="json-property-type">string</span>
+                                                    <span class="json-property-range" title="Value limits"></span>
+                                                    
+                                                        <span class="json-property-pattern" title="String pattern">, must match <span class="json-schema--regex">^[0-9]{4}$</span>
+                                                </dt>
+                                                <dd>
+                                                    
+                                                    <div class="json-inner-schema">
+                                                        
+                                                    </div>
+                                                </dd>
+                                                <dt data-property-name="name">
+                                                    <span class="json-property-name">name:</span>
+                                                    
+                                                    <span class="json-property-type">string</span>
+                                                    <span class="json-property-range" title="Value limits"></span>
+                                                    
+                                                        <span class="json-property-range" title="String length limits">
+                                                                (at least 2 chars)
+                                                        </span>
+                                                </dt>
+                                                <dd>
+                                                    
+                                                    <div class="json-inner-schema">
+                                                        
+                                                    </div>
+                                                </dd>
+                                                <dt data-property-name="category">
+                                                    <span class="json-property-name">category:</span>
+                                                    
+                                                    <span class="json-property-type">string[]</span>
+                                                    <span class="json-property-range" title="Value limits"></span>
+                                                    
+                                                </dt>
+                                                <dd>
+                                                    
+                                                    <div class="json-inner-schema">
+                                                        
+                                                                        <section class="json-schema-array-items">
+                                                                            
+                                                                            <span class="json-property-type">string</span>
+                                                                            <span class="json-property-range" title="Value limits"></span>
+                                                                            
+                                                                            <div class="json-inner-schema">
+                                                                                
+                                                                            </div>
+                                                                        </section>                </div>
+                                                </dd>
+                                                <dt data-property-name="price">
+                                                    <span class="json-property-name">price:</span>
+                                                    
+                                                    <span class="json-property-type">string</span>
+                                                    <span class="json-property-range" title="Value limits"></span>
+                                                    
+                                                        <span class="json-property-range" title="String length limits">
+                                                                (at least 1 chars)
+                                                        </span>
+                                                </dt>
+                                                <dd>
+                                                    
+                                                    <div class="json-inner-schema">
+                                                        
+                                                    </div>
+                                                </dd>
+                                                <dt data-property-name="currency">
+                                                    <span class="json-property-name">currency:</span>
+                                                    
+                                                    <span class="json-property-type">    <a class="json-schema-ref" href="#/definitions/currency">currency</a>
+                                                    </span>
+                                                    <span class="json-property-range" title="Value limits"></span>
+                                                    
+                                                </dt>
+                                                <dd>
+                                                    
+                                                    <div class="json-inner-schema">
+                                                        
+                                                    </div>
+                                                </dd>
+                                                <dt data-property-name="variants">
+                                                    <span class="json-property-name">variants:</span>
+                                                    
+                                                    <span class="json-property-type">object</span>
+                                                    <span class="json-property-range" title="Value limits"></span>
+                                                    
+                                                </dt>
+                                                <dd>
+                                                    
+                                                    <div class="json-inner-schema">
+                                                        
+                                                                <section class="json-schema-properties">
+                                                                    <dl>
+                                                                            <dt data-property-name="Farbe">
+                                                                                <span class="json-property-name">Farbe:</span>
+                                                                                
+                                                                                <span class="json-property-type">string</span>
+                                                                                <span class="json-property-range" title="Value limits"></span>
+                                                                                
+                                                                            </dt>
+                                                                            <dd>
+                                                                                
+                                                                                <div class="json-inner-schema">
+                                                                                    
+                                                                                </div>
+                                                                            </dd>
+                                                                            <dt data-property-name="Gewicht">
+                                                                                <span class="json-property-name">Gewicht:</span>
+                                                                                
+                                                                                <span class="json-property-type">string</span>
+                                                                                <span class="json-property-range" title="Value limits"></span>
+                                                                                
+                                                                            </dt>
+                                                                            <dd>
+                                                                                
+                                                                                <div class="json-inner-schema">
+                                                                                    
+                                                                                </div>
+                                                                            </dd>
+                                                                            <dt data-property-name="Variante">
+                                                                                <span class="json-property-name">Variante:</span>
+                                                                                
+                                                                                <span class="json-property-type">string</span>
+                                                                                <span class="json-property-range" title="Value limits"></span>
+                                                                                
+                                                                            </dt>
+                                                                            <dd>
+                                                                                
+                                                                                <div class="json-inner-schema">
+                                                                                    
+                                                                                </div>
+                                                                            </dd>
+                                                                    </dl>
+                                                                </section>
+                                                    </div>
+                                                </dd>
+                                        </dl>
+                                    </section>
+                    </div>
+                </div></div>
+<script src="bundle.js" type="application/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+{
+    
+    "orderNumber": "234",
+    "status": "sale",
+    "orderPrice": "5447.2",
+    "currency": "EUR",
+    "basket": {
+	
+        "id": "3",
+        "products": [{
+		
+            "product": {
+			
+				"id": "6450",
+				"name": "weiße Schokolade",
+				"category": ["Lebensmittel", "Süßigkeiten", "schokoladiges", "lecker"],
+				"price": "0.89",
+				"currency": "EURO",
+				"variants": {"Farbe":"weiß","Gewicht":"100g","Variante":"Tafel"}
+			},
+            "quantity": 1
+			
+        }, {
+		
+            "product": {
+			
+				"id": "6451",
+				"name": "Zartbitter Schokolade",
+				"category": ["Lebensmittel", "Süßigkeiten", "schokoladiges", "lecker"],
+				"price": "0.99",
+				"currency": "EUR",
+				"variants": {"Farbe":"weiß","Gewicht":"100g","Variante":"Tafel"}
+			},	
+			"quantity": 1
+		}]
+				
+    },
+    "customerId": "345465",
+    "customerGroup": "Schokomonster",
+    "customerAddress": "27356 Rotenburg Jupiterstrasse 13",
+    "invoiceAddress": "27356 Rotenburg Jupiterstrasse 13",
+    "paymentMethod": "Paypal",
+    "deliveryConditions": "Grosser Transport",
+    "paymentConditions": "Sofortzahlung",
+    "shipType": "Schiff",
+    "shipCosts": "490",
+    "couponCodes": "43847884595",
+    "giftPackage": ["333"],
+    "differenceData": 0
+    
+}
